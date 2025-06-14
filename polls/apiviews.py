@@ -3,8 +3,14 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 
+from rest_framework import viewsets
+
 from .models import Poll, Choice
 from .serializers import PollSerializer, ChoiceSerializer, VoteSerializer
+
+class PollViewSet(viewsets.ModelViewSet):
+    queryset = Poll.objects.all()
+    serializer_class = PollSerializer
 
 class PollList(generics.ListCreateAPIView):
     queryset = Poll.objects.all()
