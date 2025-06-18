@@ -3,8 +3,6 @@ from .apiviews import PollViewSet, ChoiceList, CreateVote, UserCreate, LoginView
 from rest_framework.routers import DefaultRouter
 from .swagger import schema_view
 
-
-
 router = DefaultRouter()
 router.register('polls', PollViewSet, basename='polls')
 
