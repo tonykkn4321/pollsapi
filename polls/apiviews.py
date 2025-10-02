@@ -38,3 +38,10 @@ class ChoiceList(generics.ListCreateAPIView):
 
 class CreateVote(generics.CreateAPIView):
     serializer_class = VoteSerializer
+
+# We've used three different classes from rest_framework.generics.
+# The names of the classes are representative of what they do:
+
+# ListCreateAPIView: Get a list of entities, or create them. Allows GET and POST.
+# RetrieveDestroyAPIView: Retrieve individual entity details, or delete the entity. Allows GET and DELETE.
+# CreateAPIView: Allows creating entities, but not listing them. Allows POST.
